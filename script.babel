@@ -52,7 +52,6 @@ const App = () => {
     const [output, setOutput] = React.useState("")
     const [calculatorData, setCalculatorData] = React.useState("")
     
-    
     const handleSubmit = () => {
       console.log("handleSubmit", calculatorData)
       const total = eval(calculatorData)
@@ -140,8 +139,7 @@ const App = () => {
         }
       }
     }
-    
-    
+     
     const handleInput = (value) => {
       const number = numbers.find((num) => num === value);
       const operator = operators.find((op) => op === value);
@@ -171,7 +169,6 @@ const App = () => {
       setOutput(calculatorData)
     }
 
-    
     React.useEffect (() => {
       handleOutput()
     }, [calculatorData])
